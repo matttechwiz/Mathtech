@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathtech Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===== Hamburger Styles ===== */
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 25px;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      z-index: 1001;
+      display: none; /* hidden on desktop */
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .mobile-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      margin: 15px 0;
+      transition: color 0.2s ease;
+    }
+
+    .mobile-nav a:hover {
+      color: #00ffcc;
+    }
+
+    .mobile-nav.active {
+      right: 0;
+    }
+
+    @media (max-width: 991px) {
+      .hamburger {
+        display: block;
+      }
+      .footer-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+      <div class="big-container">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Mathtech Portfolio</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+          <style>
+            /* ===== Hamburger Styles ===== */
+            .hamburger {
+              position: fixed;
+              top: 20px;
+              right: 25px;
+              font-size: 28px;
+              color: white;
+              cursor: pointer;
+              z-index: 1001;
+              display: none; /* hidden on desktop */
+            }
+        
+            .mobile-nav {
+              position: fixed;
+              top: 0;
+              right: -100%;
+              width: 70%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.95);
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              transition: right 0.3s ease;
+              z-index: 1000;
+            }
+        
+            .mobile-nav a {
+              color: white;
+              text-decoration: none;
+              font-size: 22px;
+              margin: 15px 0;
+              transition: color 0.2s ease;
+            }
+        
+            .mobile-nav a:hover {
+              color: #00ffcc;
+            }
+        
+            .mobile-nav.active {
+              right: 0;
+            }
+        
+            @media (max-width: 991px) {
+              .hamburger {
+                display: block;
+              }
+              .footer-nav {
+                display: none;
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="main-container">
+            <video autoplay muted loop playsinline id="bg-video">
+              <source src="CyberProtect Illustration & Motion Design.mp4" type="video/mp4" />
+            </video>
+        
+            <div class="hero">
+              <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Mathtech</span>
+              </div>
+              <div class="nav">
+                <h4><\Math<span>Tech></span></h4>
+              </div><br><br>
+              <div class="section-one">
+                <p>HOME</p> 
+                <h3>Hi, I’m Mathew, <br>a <span>creative</span> developer</h3>
+                <p class="complement">I bring value to web development projects by merging <br> technical expertise with creativity and aesthetics</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="section-two">
+            <h3>Your creative web developer</h3>
+          </div>
+        
+          <!-- About Me -->
+          <section class="about-wrapper" id="about">
+            <div class="window">
+              <div class="window-bar">
+                <div class="win-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="win-title">
+                  <i class="fa-solid fa-window-maximize"></i>
+                  <span>About Me — Mathtech</span>
+                </div>
+                <div class="win-actions">
+                  <i class="fa-regular fa-square-minus"></i>
+                  <i class="fa-regular fa-square"></i>
+                  <i class="fa-regular fa-square-xmark"></i>
+                </div>
+              </div>
+          
+              <div class="window-content">
+                <header class="about-head">
+                  <img src="hdgd.jpg" alt="" class="avatar">
+                  <div>
+                    <h2>Oyebode Mathew (Mathtech)</h2>
+                    <p class="subtitle">Web Developer • E-commerce & business sites</p>
+                  </div>
+                </header>
+          
+                <p>
+                  I build fast, responsive, and SEO-friendly websites that help businesses look
+                  professional and sell online. I focus on clean UI, mobile-first layouts, and
+                  simple site maintenance for clients.I’m a web developer driven by curiosity and 
+                  creativity. I love transforming ideas into functional websites that not only look good but also perform well. Coding isn’t just a skill for me,
+                  it’s something I genuinely enjoy, a craft that allows me to keep learning, solving problems, and bringing concepts to life on the web.
+                </p>
+          
+                <ul class="about-list">
+                  <li><i class="fa-solid fa-code"></i> HTML, CSS, JavaScript</li>
+                  <li><i class="fa-solid fa-shop"></i> E-commerce setups & product pages</li>
+                  <li><i class="fa-solid fa-gauge-high"></i> Performance & accessibility</li>
+                  <li><i class="fa-solid fa-screwdriver-wrench"></i> Ongoing updates & support</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        
+          <!-- Mini Grid -->
+          <section class="mini-grid" id="work">
+            <!-- Social Media -->
+            <div class="mini-window">
+              <div class="mini-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">Socials</span>
+              </div>
+              <div class="mini-content">
+                <a href="https://github.com/matttechwiz" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://x.com/Techwiz_jnr" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.instagram.com/techwizjnr/?__pwa=1#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+              </div>
+            </div>
+        
+            <!-- Work -->
+            <div class="mini-window">
+              <div class="mini-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">Work</span>
+              </div>
+              <div class="mini-content">
+                <p><i class="fas fa-laptop-code"></i> Freelance Web Developer</p>
+                <p><i class="fas fa-globe"></i> Available for Remote Work</p>
+              </div>
+            </div>
+        
+            <!-- Hobbies -->
+            <div class="mini-window">
+              <div class="mini-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">Hobbies</span>
+              </div>
+              <div class="mini-content">
+                <p><i class="fas fa-book"></i> Reading tech blogs & books</p>
+                <p><i class="fas fa-gamepad"></i> Gaming</p>
+                <p><i class="fas fa-camera"></i> Photography</p>
+                <p><i class="fas fa-music"></i> Listening to music</p>
+              </div>
+            </div>
+        
+            <!-- Portrait (Centered) -->
+            <div class="mini-window portrait-center">
+              <div class="mini-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">Portrait</span>
+              </div>
+              <div class="mini-content portrait-img">
+                  <img src="hdgd.jpg" alt="profile">
+              </div>
+            </div>
+          </section>
+        
+          <!-- <div id="btn"><button>about-me</button></div> -->
+        
+          <!-- Projects Section -->
+          <section class="third-section" id="experiments">
+            <h4>Projects Highlight</h4>
+            <div class="projects">
+              <div class="project-card">
+                <a href="https://double-teeclothing.netlify.app/" target="_blank">
+                  <img src="Screenshot 2025-08-15 201947.png" alt="Project 1">
+                </a>
+              </div>
+              <div class="project-card">
+                <a href="" target="_blank">
+                  <img src="Screenshot 2025-08-23 085921.png" alt="Project 1">
+                </a><p>Coming soon</p>
+              </div>
+              <div class="project-card">
+                <a href="https://bruvi.com/" target="_blank">
+                  <img src="Screenshot 2025-08-23 005601.png" alt="Project 1">
+                </a>
+              </div>
+            </div>
+          </section>
+        
+          <!-- Testimonials Section -->
+          <section class="testimonials">
+            <h3>What People Say About My Work</h3>
+            <div class="testimonial-grid">
+              
+              <div class="testimonial-card">
+                <!-- <img src="client1.jpg" alt="Client 1"> -->
+                <h4>Dt Clothing</h4>
+                <p class="role">Startup Founder</p>
+                <p class="quote">"Mathew completely transformed my business website. His attention to detail and creativity helped us stand out and attract more customers. Highly recommended!"</p>
+              </div>
+              
+              <div class="testimonial-card">
+                <!-- <img src="client2.jpg" alt="Client 2"> -->
+                <h4>David Kim</h4>
+                <p class="role">E-commerce Owner</p>
+                <p class="quote">"Working with Mathtech was seamless. He built a fast, mobile-friendly online store that boosted our sales within weeks. Great communication and ongoing support."</p>
+              </div>
+              
+              <div class="testimonial-card">
+                <!-- <img src="client3.jpg" alt="Client 3"> -->
+                <h4>Jesupemi Stephen</h4>
+                <p class="role">Business Owner</p>
+                <p class="quote">"I wanted a simple but elegant business portfolio, and Mathew delivered exactly that. Easy to manage, beautiful, and optimized for SEO. I couldn’t ask for better!"</p>
+              </div>
+            
+            </div>
+          </section>
+        
+          <!-- Work Together Section -->
+          <section class="work-together" id="contact">
+            <img src="hdgd.jpg" alt="Mathew" class="work-img">
+            <h3>Let’s work together on your next project</h3>
+            <a href="mailto:matttechwiz@gmail.com" class="work-btn">Let’s Get Started</a>
+            <a href="mathtech.jpg" class="work-btn"> Download Resume</a>
+          </section>
+        
+          <!-- Footer -->
+          <footer class="footer">
+            <div class="footer-top">
+              <!-- Logo -->
+              <div class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Mathtech</span>
+              </div>
+        
+              <!-- Navigation -->
+              <nav class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#experiments">Experiments</a>
+                <a href="#contact">Contact</a>
+              </nav>
+            </div>
+        
+            <!-- Copywrite -->
+            <p class="footer-copy">©2025 Mathtechwiz | Web Developer</p>
+        
+            <!-- Location & Time -->
+            <div class="footer-location">
+              <p>🌍 Based in Nigeria | current-time: <span id="clock"></span></p>
+            </div>
+          </footer>
+        
+          <!-- Hamburger Button -->
+          <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        
+          <!-- Mobile Navigation -->
+          <nav class="mobile-nav" id="mobileNav">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#experiments">Experiments</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <!-- Scroll to Top Button -->
+          <button id="scrollTopBtn" class="scroll-top">↑</button>
+        
+        
+          <!-- Script -->
+          <script>
+            function updateClock() {
+              let now = new Date();
+              let options = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+                timeZone: 'Africa/Lagos'
+              };
+              let timeString = now.toLocaleTimeString('en-NG', options);
+              document.getElementById('clock').textContent = timeString;
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        
+            // Hamburger functionality
+            const hamburger = document.getElementById("hamburger");
+            const mobileNav = document.getElementById("mobileNav");
+        
+            hamburger.addEventListener("click", () => {
+              mobileNav.classList.toggle("active");
+              hamburger.innerHTML = mobileNav.classList.contains("active") 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+            });
+        
+            document.querySelectorAll(".mobile-nav a").forEach(link => {
+              link.addEventListener("click", () => {
+                mobileNav.classList.remove("active");
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+              });
+            });
+            // 1. Scroll Reveal Animation
+        const reveals = document.querySelectorAll(".reveal");
+        window.addEventListener("scroll", () => {
+          reveals.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+              el.classList.add("active");
+            }
+          });
+        });
+        
+        // 2. Hamburger Menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav");
+        
+        if (menuBtn && nav) {
+          menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("open");
+            nav.classList.toggle("active");
+          });
+        }
+        
+        // 3. Button Ripple Effect (applies to all buttons)
+        document.querySelectorAll("button").forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            let ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+            this.appendChild(ripple);
+        
+            let x = e.clientX - this.offsetLeft;
+            let y = e.clientY - this.offsetTop;
+            ripple.style.left = x + "px";
+            ripple.style.top = y + "px";
+        
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+        
+        // 4. Scroll to Top Button
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            scrollBtn.classList.add("show");
+          } else {
+            scrollBtn.classList.remove("show");
+          }
+        });
+        scrollBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        
+          </script>
+        </body>
+        </html>
+        
+      </div>
+</body>
+</html>
