@@ -3,457 +3,720 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mathtech Portfolio</title>
+  <title>Mathtech Portfolio - Web Developer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* ===== Hamburger Styles ===== */
-    .hamburger {
-      position: fixed;
-      top: 20px;
-      right: 25px;
-      font-size: 28px;
-      color: white;
-      cursor: pointer;
-      z-index: 1001;
-      display: none; /* hidden on desktop */
-    }
-
-    .mobile-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.95);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: right 0.3s ease;
-      z-index: 1000;
-    }
-
-    .mobile-nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 22px;
-      margin: 15px 0;
-      transition: color 0.2s ease;
-    }
-
-    .mobile-nav a:hover {
-      color: #00ffcc;
-    }
-
-    .mobile-nav.active {
-      right: 0;
-    }
-
-    @media (max-width: 991px) {
-      .hamburger {
-        display: block;
-      }
-      .footer-nav {
-        display: none;
-      }
-    }
-  </style>
 </head>
 <body>
-      <div class="big-container">
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Mathtech Portfolio</title>
-          <link rel="stylesheet" href="style.css">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-          <style>
-            /* ===== Hamburger Styles ===== */
-            .hamburger {
-              position: fixed;
-              top: 20px;
-              right: 25px;
-              font-size: 28px;
-              color: white;
-              cursor: pointer;
-              z-index: 1001;
-              display: none; /* hidden on desktop */
-            }
-        
-            .mobile-nav {
-              position: fixed;
-              top: 0;
-              right: -100%;
-              width: 70%;
-              height: 100%;
-              background: rgba(0, 0, 0, 0.95);
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              transition: right 0.3s ease;
-              z-index: 1000;
-            }
-        
-            .mobile-nav a {
-              color: white;
-              text-decoration: none;
-              font-size: 22px;
-              margin: 15px 0;
-              transition: color 0.2s ease;
-            }
-        
-            .mobile-nav a:hover {
-              color: #00ffcc;
-            }
-        
-            .mobile-nav.active {
-              right: 0;
-            }
-        
-            @media (max-width: 991px) {
-              .hamburger {
-                display: block;
-              }
-              .footer-nav {
-                display: none;
-              }
-            }
-          </style>
-        </head>
-        <body>
-          <div class="main-container">
-            <video autoplay muted loop playsinline id="bg-video">
-              <source src="CyberProtect Illustration & Motion Design.mp4" type="video/mp4" />
-            </video>
-        
-            <div class="hero">
-              <div class="logo">
-                <i class="fas fa-code"></i>
-                <span>Mathtech</span>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="loading-spinner"></div>
+      <p>Loading portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo fade-in">
+        <i class="fas fa-code"></i>
+        <span>Mathtech</span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="big-container">
+    <div class="main-container">
+      <!-- Hero Section -->
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="CyberProtect Illustration & Motion Design.mp4" type="video/mp4" />
+      </video>
+
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="logo fade-in-down">
+            <i class="fas fa-code"></i>
+            <span>Mathtech</span>
+          </div>
+          <div class="nav-title fade-in-up" style="animation-delay: 0.1s;">
+            <h4><span class="code-bracket">&lt;</span>Math<span class="accent">Tech</span><span class="code-bracket">&gt;</span></h4>
+          </div>
+          <div class="section-one fade-in-up" style="animation-delay: 0.2s;">
+            <p class="section-label">WELCOME</p> 
+            <h1>Hi, I'm Mathew, <br>a <span class="accent">creative</span> developer</h1>
+            <p class="complement">I bring value to web development projects by merging <br> technical expertise with creativity and aesthetics</p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary" onclick="smoothScroll('about')">
+                <span>Let's Connect</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-secondary" onclick="smoothScroll('projects')">
+                <span>View My Work</span>
+                <i class="fas fa-briefcase"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" id="scrollIndicator">
+          <span>Scroll to explore</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <!-- Section Two -->
+      <section class="section-two fade-section">
+        <h2 class="section-title">Your creative web developer</h2>
+      </section>
+
+      <!-- About Me Section -->
+      <section class="about-wrapper" id="about">
+        <div class="window fade-section">
+          <div class="window-bar">
+            <div class="win-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="win-title">
+              <i class="fa-solid fa-window-maximize"></i>
+              <span>About Me — Mathtech</span>
+            </div>
+            <div class="win-actions" id="winActions">
+              <i class="fa-regular fa-square-minus" onclick="minimizeWindow()" style="cursor:pointer;"></i>
+              <i class="fa-regular fa-square" onclick="maximizeWindow()" style="cursor:pointer;"></i>
+              <i class="fa-regular fa-square-xmark" onclick="closeWindow()" style="cursor:pointer;"></i>
+            </div>
+          </div>
+      
+          <div class="window-content" id="windowContent">
+            <header class="about-head">
+              <img src="hdgd.jpg" alt="Mathew" class="avatar">
+              <div>
+                <h2>Oyebode Mathew (Mathtech)</h2>
+                <p class="subtitle">Web Developer • E-commerce & business sites</p>
               </div>
-              <div class="nav">
-                <h4><\Math<span>Tech></span></h4>
-              </div><br><br>
-              <div class="section-one">
-                <p>HOME</p> 
-                <h3>Hi, I’m Mathew, <br>a <span>creative</span> developer</h3>
-                <p class="complement">I bring value to web development projects by merging <br> technical expertise with creativity and aesthetics</p>
+            </header>
+      
+            <p class="about-description">
+              I build fast, responsive, and SEO-friendly websites that help businesses look
+              professional and sell online. I focus on clean UI, mobile-first layouts, and
+              simple site maintenance for clients. I'm a web developer driven by curiosity and 
+              creativity. I love transforming ideas into functional websites that not only look good but also perform well. Coding isn't just a skill for me,
+              it's something I genuinely enjoy, a craft that allows me to keep learning, solving problems, and bringing concepts to life on the web.
+            </p>
+      
+            <ul class="about-list">
+              <li class="list-item" style="animation-delay: 0.1s;"><i class="fa-solid fa-code"></i> <span>HTML, CSS, JavaScript</span></li>
+              <li class="list-item" style="animation-delay: 0.2s;"><i class="fa-solid fa-shop"></i> <span>E-commerce setups & product pages</span></li>
+              <li class="list-item" style="animation-delay: 0.3s;"><i class="fa-solid fa-gauge-high"></i> <span>Performance & accessibility</span></li>
+              <li class="list-item" style="animation-delay: 0.4s;"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Ongoing updates & support</span></li>
+            </ul>
+
+            <div class="skills-showcase">
+              <h3>Technical Skills</h3>
+              <div class="skills-grid">
+                <div class="skill-card">
+                  <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                  <span>HTML5</span>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                  <span>CSS3</span>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-card">
+                  <div class="skill-icon"><i class="fas fa-database"></i></div>
+                  <span>E-commerce</span>
+                </div>
               </div>
             </div>
           </div>
-        
-          <div class="section-two">
-            <h3>Your creative web developer</h3>
+        </div>
+      </section>
+  
+      <!-- Mini Grid -->
+      <section class="mini-grid" id="work">
+        <div class="mini-window fade-section">
+          <div class="mini-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">Socials</span>
           </div>
-        
-          <!-- About Me -->
-          <section class="about-wrapper" id="about">
-            <div class="window">
-              <div class="window-bar">
-                <div class="win-dots">
-                  <span class="dot red"></span>
-                  <span class="dot yellow"></span>
-                  <span class="dot green"></span>
-                </div>
-                <div class="win-title">
-                  <i class="fa-solid fa-window-maximize"></i>
-                  <span>About Me — Mathtech</span>
-                </div>
-                <div class="win-actions">
-                  <i class="fa-regular fa-square-minus"></i>
-                  <i class="fa-regular fa-square"></i>
-                  <i class="fa-regular fa-square-xmark"></i>
-                </div>
-              </div>
-          
-              <div class="window-content">
-                <header class="about-head">
-                  <img src="hdgd.jpg" alt="" class="avatar">
-                  <div>
-                    <h2>Oyebode Mathew (Mathtech)</h2>
-                    <p class="subtitle">Web Developer • E-commerce & business sites</p>
-                  </div>
-                </header>
-          
-                <p>
-                  I build fast, responsive, and SEO-friendly websites that help businesses look
-                  professional and sell online. I focus on clean UI, mobile-first layouts, and
-                  simple site maintenance for clients.I’m a web developer driven by curiosity and 
-                  creativity. I love transforming ideas into functional websites that not only look good but also perform well. Coding isn’t just a skill for me,
-                  it’s something I genuinely enjoy, a craft that allows me to keep learning, solving problems, and bringing concepts to life on the web.
-                </p>
-          
-                <ul class="about-list">
-                  <li><i class="fa-solid fa-code"></i> HTML, CSS, JavaScript</li>
-                  <li><i class="fa-solid fa-shop"></i> E-commerce setups & product pages</li>
-                  <li><i class="fa-solid fa-gauge-high"></i> Performance & accessibility</li>
-                  <li><i class="fa-solid fa-screwdriver-wrench"></i> Ongoing updates & support</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        
-          <!-- Mini Grid -->
-          <section class="mini-grid" id="work">
-            <!-- Social Media -->
-            <div class="mini-window">
-              <div class="mini-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="title">Socials</span>
-              </div>
-              <div class="mini-content">
-                <a href="https://github.com/matttechwiz" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://x.com/Techwiz_jnr" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="https://www.instagram.com/techwizjnr/?__pwa=1#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-              </div>
-            </div>
-        
-            <!-- Work -->
-            <div class="mini-window">
-              <div class="mini-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="title">Work</span>
-              </div>
-              <div class="mini-content">
-                <p><i class="fas fa-laptop-code"></i> Freelance Web Developer</p>
-                <p><i class="fas fa-globe"></i> Available for Remote Work</p>
-              </div>
-            </div>
-        
-            <!-- Hobbies -->
-            <div class="mini-window">
-              <div class="mini-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="title">Hobbies</span>
-              </div>
-              <div class="mini-content">
-                <p><i class="fas fa-book"></i> Reading tech blogs & books</p>
-                <p><i class="fas fa-gamepad"></i> Gaming</p>
-                <p><i class="fas fa-camera"></i> Photography</p>
-                <p><i class="fas fa-music"></i> Listening to music</p>
-              </div>
-            </div>
-        
-            <!-- Portrait (Centered) -->
-            <div class="mini-window portrait-center">
-              <div class="mini-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="title">Portrait</span>
-              </div>
-              <div class="mini-content portrait-img">
-                  <img src="hdgd.jpg" alt="profile">
-              </div>
-            </div>
-          </section>
-        
-          <!-- <div id="btn"><button>about-me</button></div> -->
-        
-          <!-- Projects Section -->
-          <section class="third-section" id="experiments">
-            <h4>Projects Highlight</h4>
-            <div class="projects">
-              <div class="project-card">
-                <a href="https://double-teeclothing.netlify.app/" target="_blank">
-                  <img src="Screenshot 2025-08-15 201947.png" alt="Project 1">
-                </a>
-              </div>
-              <div class="project-card">
-                <a href="" target="_blank">
-                  <img src="Screenshot 2025-08-23 085921.png" alt="Project 1">
-                </a><p>Coming soon</p>
-              </div>
-              <div class="project-card">
-                <a href="https://bruvi.com/" target="_blank">
-                  <img src="Screenshot 2025-08-23 005601.png" alt="Project 1">
-                </a>
-              </div>
-            </div>
-          </section>
-        
-          <!-- Testimonials Section -->
-          <section class="testimonials">
-            <h3>What People Say About My Work</h3>
-            <div class="testimonial-grid">
-              
-              <div class="testimonial-card">
-                <!-- <img src="client1.jpg" alt="Client 1"> -->
-                <h4>Dt Clothing</h4>
-                <p class="role">Startup Founder</p>
-                <p class="quote">"Mathew completely transformed my business website. His attention to detail and creativity helped us stand out and attract more customers. Highly recommended!"</p>
-              </div>
-              
-              <div class="testimonial-card">
-                <!-- <img src="client2.jpg" alt="Client 2"> -->
-                <h4>David Kim</h4>
-                <p class="role">E-commerce Owner</p>
-                <p class="quote">"Working with Mathtech was seamless. He built a fast, mobile-friendly online store that boosted our sales within weeks. Great communication and ongoing support."</p>
-              </div>
-              
-              <div class="testimonial-card">
-                <!-- <img src="client3.jpg" alt="Client 3"> -->
-                <h4>Jesupemi Stephen</h4>
-                <p class="role">Business Owner</p>
-                <p class="quote">"I wanted a simple but elegant business portfolio, and Mathew delivered exactly that. Easy to manage, beautiful, and optimized for SEO. I couldn’t ask for better!"</p>
-              </div>
-            
-            </div>
-          </section>
-        
-          <!-- Work Together Section -->
-          <section class="work-together" id="contact">
-            <img src="hdgd.jpg" alt="Mathew" class="work-img">
-            <h3>Let’s work together on your next project</h3>
-            <a href="mailto:matttechwiz@gmail.com" class="work-btn">Let’s Get Started</a>
-            <a href="mathtech.jpg" class="work-btn"> Download Resume</a>
-          </section>
-        
-          <!-- Footer -->
-          <footer class="footer">
-            <div class="footer-top">
-              <!-- Logo -->
-              <div class="footer-logo">
-                <i class="fas fa-code"></i>
-                <span>Mathtech</span>
-              </div>
-        
-              <!-- Navigation -->
-              <nav class="footer-nav">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#experiments">Experiments</a>
-                <a href="#contact">Contact</a>
-              </nav>
-            </div>
-        
-            <!-- Copywrite -->
-            <p class="footer-copy">©2025 Mathtechwiz | Web Developer</p>
-        
-            <!-- Location & Time -->
-            <div class="footer-location">
-              <p>🌍 Based in Nigeria | current-time: <span id="clock"></span></p>
-            </div>
-          </footer>
-        
-          <!-- Hamburger Button -->
-          <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
+          <div class="mini-content">
+            <a href="https://github.com/matttechwiz" target="_blank" class="social-link"><i class="fab fa-github"></i> <span>GitHub</span></a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a>
+            <a href="https://x.com/Techwiz_jnr" target="_blank" class="social-link"><i class="fab fa-twitter"></i> <span>Twitter</span></a>
+            <a href="https://www.instagram.com/techwizjnr/?__pwa=1#" target="_blank" class="social-link"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
           </div>
-        
-          <!-- Mobile Navigation -->
-          <nav class="mobile-nav" id="mobileNav">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#experiments">Experiments</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <!-- Scroll to Top Button -->
-          <button id="scrollTopBtn" class="scroll-top">↑</button>
-        
-        
-          <!-- Script -->
-          <script>
-            function updateClock() {
-              let now = new Date();
-              let options = {
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false,
-                timeZone: 'Africa/Lagos'
-              };
-              let timeString = now.toLocaleTimeString('en-NG', options);
-              document.getElementById('clock').textContent = timeString;
-            }
-            updateClock();
-            setInterval(updateClock, 1000);
-        
-            // Hamburger functionality
-            const hamburger = document.getElementById("hamburger");
-            const mobileNav = document.getElementById("mobileNav");
-        
-            hamburger.addEventListener("click", () => {
-              mobileNav.classList.toggle("active");
-              hamburger.innerHTML = mobileNav.classList.contains("active") 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-            });
-        
-            document.querySelectorAll(".mobile-nav a").forEach(link => {
-              link.addEventListener("click", () => {
-                mobileNav.classList.remove("active");
-                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-              });
-            });
-            // 1. Scroll Reveal Animation
-        const reveals = document.querySelectorAll(".reveal");
-        window.addEventListener("scroll", () => {
-          reveals.forEach((el) => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-              el.classList.add("active");
-            }
-          });
-        });
-        
-        // 2. Hamburger Menu
-        const menuBtn = document.querySelector(".menu-btn");
-        const nav = document.querySelector(".nav");
-        
-        if (menuBtn && nav) {
-          menuBtn.addEventListener("click", () => {
-            menuBtn.classList.toggle("open");
-            nav.classList.toggle("active");
-          });
+        </div>
+  
+        <div class="mini-window fade-section">
+          <div class="mini-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">Work</span>
+          </div>
+          <div class="mini-content">
+            <p class="work-item"><i class="fas fa-laptop-code"></i> <span>Freelance Web Developer</span></p>
+            <p class="work-item"><i class="fas fa-globe"></i> <span>Available for Remote Work</span></p>
+            <p class="work-item"><i class="fas fa-star"></i> <span>5+ Years Experience</span></p>
+          </div>
+        </div>
+  
+        <div class="mini-window fade-section">
+          <div class="mini-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">Hobbies</span>
+          </div>
+          <div class="mini-content">
+            <p class="hobby-item"><i class="fas fa-book"></i> <span>Reading tech blogs & books</span></p>
+            <p class="hobby-item"><i class="fas fa-gamepad"></i> <span>Gaming</span></p>
+            <p class="hobby-item"><i class="fas fa-camera"></i> <span>Photography</span></p>
+            <p class="hobby-item"><i class="fas fa-music"></i> <span>Listening to music</span></p>
+          </div>
+        </div>
+  
+        <div class="mini-window portrait-center fade-section">
+          <div class="mini-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">Portrait</span>
+          </div>
+          <div class="mini-content portrait-img">
+              <img src="hdgd.jpg" alt="profile">
+          </div>
+        </div>
+      </section>
+  
+      <!-- Projects Section -->
+      <section class="third-section" id="projects">
+        <div class="section-header fade-section">
+          <h2 class="section-title">Projects Highlight</h2>
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+          </div>
+        </div>
+        <div class="projects" id="projectsContainer">
+          <div class="project-card fade-section" data-category="ecommerce">
+            <div class="project-image-wrapper">
+              <a href="https://double-teeclothing.netlify.app/" target="_blank">
+                <img src="Screenshot 2025-08-15 201947.png" alt="Double Tee Clothing">
+                <div class="project-overlay">
+                  <span>View Project</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </div>
+              </a>
+            </div>
+            <div class="project-info">
+              <h3>Double Tee Clothing</h3>
+              <p>E-commerce platform for clothing brand</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+         <div class="project-card fade-section" data-category="ecommerce">
+            <div class="project-image-wrapper">
+              <a href="https://familyofgraceglobal.com/" target="_blank">
+                <img src="Screenshot 2026-01-25 021556.png" alt="familyofgrace">
+                <div class="project-overlay">
+                  <span>View Project</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </div>
+              </a>
+            </div>
+            <div class="project-info">
+              <h3>Faamily Of Grace</h3>
+              <p>A christian religious fellowship website</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card fade-section" data-category="portfolio">
+            <div class="project-image-wrapper">
+              <a href="https://bruvi.com/" target="_blank">
+                <img src="Screenshot 2025-08-23 005601.png" alt="Bruvi Portfolio">
+                <div class="project-overlay">
+                  <span>View Project</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </div>
+              </a>
+            </div>
+            <div class="project-info">
+              <h3>Bruvi Portfolio</h3>
+              <p>Professional portfolio website</p>
+              <div class="project-tags">
+                <span class="tag">Portfolio</span>
+                <span class="tag">Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Testimonials Section -->
+      <section class="testimonials" id="testimonials">
+        <div class="testimonials-header fade-section">
+          <h2 class="section-title">What People Say About My Work</h2>
+          <p class="section-subtitle">Trusted by entrepreneurs and business owners</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card fade-section" style="animation-delay: 0.1s;">
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="quote">"Mathew completely transformed my business website. His attention to detail and creativity helped us stand out and attract more customers. Highly recommended!"</p>
+            <div class="testimonial-footer">
+              <h4>DT Clothing</h4>
+              <p class="role">Startup Founder</p>
+            </div>
+          </div>
+          
+          <div class="testimonial-card fade-section" style="animation-delay: 0.2s;">
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="quote">"Working with Mathtech was seamless. He built a fast, mobile-friendly online store that boosted our sales within weeks. Great communication and ongoing support."</p>
+            <div class="testimonial-footer">
+              <h4>David Kim</h4>
+              <p class="role">E-commerce Owner</p>
+            </div>
+          </div>
+          
+          <div class="testimonial-card fade-section" style="animation-delay: 0.3s;">
+            <div class="testimonial-header">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="quote">"I wanted a simple but elegant business portfolio, and Mathew delivered exactly that. Easy to manage, beautiful, and optimized for SEO. I couldn't ask for better!"</p>
+            <div class="testimonial-footer">
+              <h4>Jesupemi Stephen</h4>
+              <p class="role">Business Owner</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Work Together Section -->
+      <section class="work-together" id="contact">
+        <div class="work-content fade-section">
+          <img src="hdgd.jpg" alt="Mathew" class="work-img">
+          <h2>Let's work together on your next project</h2>
+          <p class="work-subtitle">Ready to bring your ideas to life? Get in touch with me today.</p>
+          <div class="work-buttons">
+            <a href="mailto:matttechwiz@gmail.com" class="work-btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              <span>Send Me an Email</span>
+            </a>
+            <a href="mathtech.jpg" class="work-btn btn-secondary" download>
+              <i class="fas fa-download"></i>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-top">
+            <div class="footer-logo">
+              <i class="fas fa-code"></i>
+              <span>Mathtech</span>
+            </div>
+      
+            <nav class="footer-nav" id="footerNav">
+              <a href="#about">About</a>
+              <a href="#work">Work</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+      
+          <p class="footer-copy">©2026 Mathtechwiz | Web Developer</p>
+      
+          <div class="footer-location">
+            <p>🌍 Based in Nigeria | <span id="clock"></span></p>
+          </div>
+
+          <div class="footer-socials">
+            <a href="https://github.com/matttechwiz" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Techwiz_jnr" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/techwizjnr/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
+  
+      <button id="scrollTopBtn" class="scroll-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // ===== PERFORMANCE OPTIMIZATIONS =====
+    // Throttle function for scroll/mousemove events
+    function throttle(func, limit) {
+      let inThrottle;
+      return function(...args) {
+        if (!inThrottle) {
+          func.apply(this, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
         }
-        
-        // 3. Button Ripple Effect (applies to all buttons)
-        document.querySelectorAll("button").forEach((btn) => {
-          btn.addEventListener("click", function (e) {
-            let ripple = document.createElement("span");
-            ripple.classList.add("ripple");
-            this.appendChild(ripple);
-        
-            let x = e.clientX - this.offsetLeft;
-            let y = e.clientY - this.offsetTop;
-            ripple.style.left = x + "px";
-            ripple.style.top = y + "px";
-        
-            setTimeout(() => {
-              ripple.remove();
-            }, 600);
-          });
-        });
-        
-        // 4. Scroll to Top Button
-        const scrollBtn = document.getElementById("scrollTopBtn");
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 300) {
-            scrollBtn.classList.add("show");
+      };
+    }
+
+    // ===== Preloader =====
+    window.addEventListener('load', function() {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        setTimeout(() => preloader.style.display = 'none', 500);
+      }
+    });
+
+    // ===== Smooth Scroll Function =====
+    function smoothScroll(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // ===== Navigation Bar Functionality =====
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger?.classList.remove('active');
+      });
+    });
+
+    // ===== Optimized Scroll Events (THROTTLED) =====
+    let lastScrollY = 0;
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    const scrollProgress = document.getElementById('scrollProgress');
+    const scrollIndicator = document.getElementById('scrollIndicator');
+
+    const handleScroll = throttle(() => {
+      const scrollY = window.scrollY;
+      
+      // Navbar effect
+      if (scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      
+      // Scroll progress bar
+      if (scrollProgress) {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollY / windowHeight) * 100;
+        scrollProgress.style.width = scrolled + '%';
+      }
+      
+      // Scroll indicator
+      if (scrollIndicator) {
+        if (scrollY > 300) {
+          scrollIndicator.style.opacity = '0';
+          scrollIndicator.style.pointerEvents = 'none';
+        } else {
+          scrollIndicator.style.opacity = '1';
+          scrollIndicator.style.pointerEvents = 'auto';
+        }
+      }
+      
+      // Scroll to top button
+      if (scrollBtn) {
+        if (scrollY > 300) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
+      }
+      
+      // Active nav link (OPTIMIZED - less frequent DOM queries)
+      updateActiveNavLink(scrollY);
+      
+      lastScrollY = scrollY;
+    }, 100); // Throttle to 100ms
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // ===== Optimized Active Nav Link =====
+    let sections = [];
+    let navLinkMap = {};
+    
+    function initializeNavLinks() {
+      sections = Array.from(document.querySelectorAll('section')).map(section => ({
+        id: section.getAttribute('id'),
+        top: section.offsetTop,
+        height: section.clientHeight
+      }));
+      
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href) navLinkMap[href] = link;
+      });
+    }
+
+    function updateActiveNavLink(scrollPosition) {
+      const pos = scrollPosition + 100;
+      
+      for (let section of sections) {
+        if (pos >= section.top && pos < section.top + section.height) {
+          const href = `#${section.id}`;
+          
+          navLinks.forEach(link => link.classList.remove('active'));
+          if (navLinkMap[href]) {
+            navLinkMap[href].classList.add('active');
+          }
+          break;
+        }
+      }
+    }
+
+    // Initialize on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeNavLinks);
+    } else {
+      initializeNavLinks();
+    }
+
+    // ===== Clock Update =====
+    function updateClock() {
+      const clockEl = document.getElementById('clock');
+      if (clockEl) {
+        const now = new Date();
+        const options = {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false,
+          timeZone: 'Africa/Lagos'
+        };
+        clockEl.textContent = now.toLocaleTimeString('en-NG', options);
+      }
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // ===== Window Controls =====
+    function minimizeWindow() {
+      const content = document.getElementById('windowContent');
+      if (content) {
+        content.style.display = content.style.display === 'none' ? 'flex' : 'none';
+      }
+    }
+
+    function maximizeWindow() {
+      const windowEl = document.querySelector('.window');
+      if (windowEl) {
+        windowEl.classList.toggle('maximized');
+      }
+    }
+
+    function closeWindow() {
+      const windowEl = document.querySelector('.window');
+      if (windowEl) {
+        windowEl.style.opacity = '0';
+        windowEl.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+          windowEl.style.display = 'none';
+        }, 300);
+      }
+    }
+
+    // ===== Scroll to Top Button =====
+    if (scrollBtn) {
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // ===== Project Filter =====
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+            card.style.animation = 'none';
+            card.offsetHeight; // Trigger reflow
+            card.style.animation = 'fadeIn 0.5s ease-in-out';
           } else {
-            scrollBtn.classList.remove("show");
+            card.style.display = 'none';
           }
         });
-        scrollBtn.addEventListener("click", () => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-        
-          </script>
-        </body>
-        </html>
-        
-      </div>
+      });
+    });
+
+    // ===== Scroll Reveal Animation (OPTIMIZED) =====
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-section').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ===== OPTIMIZED Parallax Effect (THROTTLED + Cache elements) =====
+    let scrollElements = [];
+    let parallaxEnabled = true;
+
+    const handleMouseMove = throttle((e) => {
+      if (!parallaxEnabled || scrollElements.length === 0) return;
+
+      const x = (window.innerWidth - e.clientX * 2) / 100;
+      const y = (window.innerHeight - e.clientY * 2) / 100;
+
+      // Use CSS variables for better performance
+      scrollElements.forEach(el => {
+        if (el.classList.contains('visible')) {
+          el.style.transform = `perspective(1000px) rotateX(${y * 0.5}deg) rotateY(${x * 0.5}deg)`;
+        }
+      });
+    }, 50); // Throttle to 50ms instead of every event
+
+    document.addEventListener('mousemove', handleMouseMove, { passive: true });
+
+    // Reset parallax on mouse leave
+    document.addEventListener('mouseleave', () => {
+      scrollElements.forEach(el => {
+        el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      });
+    });
+
+    // Cache fade-section elements
+    function initializeParallax() {
+      scrollElements = Array.from(document.querySelectorAll('.fade-section'));
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeParallax);
+    } else {
+      initializeParallax();
+    }
+
+    // ===== Ripple Button Effect =====
+    document.addEventListener('mousedown', (e) => {
+      if (!e.target.classList.contains('btn')) return;
+
+      const btn = e.target;
+      const ripple = document.createElement('span');
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      ripple.classList.add('ripple');
+      btn.appendChild(ripple);
+
+      setTimeout(() => ripple.remove(), 600);
+    }, { passive: true });
+
+    // ===== Delegated Hover Animations =====
+    document.addEventListener('mouseenter', (e) => {
+      if (e.target.classList.contains('list-item')) {
+        e.target.style.transform = 'translateX(10px)';
+      }
+      if (e.target.classList.contains('social-link')) {
+        e.target.style.transform = 'scale(1.1) translateX(5px)';
+      }
+    }, true);
+
+    document.addEventListener('mouseleave', (e) => {
+      if (e.target.classList.contains('list-item')) {
+        e.target.style.transform = 'translateX(0)';
+      }
+      if (e.target.classList.contains('social-link')) {
+        e.target.style.transform = 'scale(1) translateX(0)';
+      }
+    }, true);
+  </script>
 </body>
 </html>
