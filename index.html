@@ -6,6 +6,20 @@
   <title>Mathtech Portfolio - Web Developer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    .nav-logo {
+      animation: bounce 2s infinite !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Preloader -->
@@ -44,19 +58,15 @@
   <div class="big-container">
     <div class="main-container">
       <!-- Hero Section -->
-      <video autoplay muted loop playsinline id="bg-video">
-        <source src="CyberProtect Illustration & Motion Design.mp4" type="video/mp4" />
-      </video>
-
       <section class="hero" id="home">
         <div class="hero-content">
-          <div class="logo fade-in-down">
+          <!-- <div class="logo fade-in-down">
             <i class="fas fa-code"></i>
             <span>Mathtech</span>
-          </div>
-          <div class="nav-title fade-in-up" style="animation-delay: 0.1s;">
+          </div> -->
+          <!-- <div class="nav-title fade-in-up" style="animation-delay: 0.1s;">
             <h4><span class="code-bracket">&lt;</span>Math<span class="accent">Tech</span><span class="code-bracket">&gt;</span></h4>
-          </div>
+          </div> -->
           <div class="section-one fade-in-up" style="animation-delay: 0.2s;">
             <p class="section-label">WELCOME</p> 
             <h1>Hi, I'm Mathew, <br>a <span class="accent">creative</span> developer</h1>
@@ -181,22 +191,7 @@
           <div class="mini-content">
             <p class="work-item"><i class="fas fa-laptop-code"></i> <span>Freelance Web Developer</span></p>
             <p class="work-item"><i class="fas fa-globe"></i> <span>Available for Remote Work</span></p>
-            <p class="work-item"><i class="fas fa-star"></i> <span>5+ Years Experience</span></p>
-          </div>
-        </div>
-  
-        <div class="mini-window fade-section">
-          <div class="mini-bar">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="title">Hobbies</span>
-          </div>
-          <div class="mini-content">
-            <p class="hobby-item"><i class="fas fa-book"></i> <span>Reading tech blogs & books</span></p>
-            <p class="hobby-item"><i class="fas fa-gamepad"></i> <span>Gaming</span></p>
-            <p class="hobby-item"><i class="fas fa-camera"></i> <span>Photography</span></p>
-            <p class="hobby-item"><i class="fas fa-music"></i> <span>Listening to music</span></p>
+            <!-- <p class="work-item"><i class="fas fa-star"></i> <span>5+ Years Experience</span></p> -->
           </div>
         </div>
   
@@ -386,7 +381,7 @@
           <p class="footer-copy">©2026 Mathtechwiz | Web Developer</p>
       
           <div class="footer-location">
-            <p>🌍 Based in Nigeria | <span id="clock"></span></p>
+            <p><span id="clock"></span></p>
           </div>
 
           <div class="footer-socials">
